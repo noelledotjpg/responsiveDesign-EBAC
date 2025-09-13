@@ -1,0 +1,83 @@
+@use 'variaveis' as v;
+@use 'mixins';
+
+.header {
+  background: v.$cor-fundo-escuro;
+  color: v.$cor-clara;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: v.$espacamento-base 5vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  &__logo {
+    font-size: v.$tamanho-fonte-base * 1.5;
+    font-weight: bold;
+  }
+}
+
+.banner {
+  position: relative;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: v.$cor-clara;
+  padding: 0 v.$espacamento-grande;
+  font-family: v.$fonte-titulos;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    background-image: url("/img/code.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3) blur(6px);
+    transform: translate(-5%, -5%);
+    z-index: 0;
+  }
+
+  &__title,
+  &__subtitle {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: v.$tamanho-fonte-titulo * 1.5;
+    margin-bottom: v.$espacamento-base;
+  }
+
+  &__subtitle {
+    font-size: v.$tamanho-fonte-subtitulo;
+  }
+}
+
+.section {
+  @include mixins.espacamento-secao;
+
+  &__title {
+    font-family: v.$fonte-titulos;
+    text-align: center;
+    font-size: v.$tamanho-fonte-titulo;
+    margin-bottom: v.$espacamento-grande;
+    color: v.$cor-primaria;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: v.$espacamento-grande;
+  background: v.$cor-fundo-escuro;
+  color: v.$cor-clara;
+  font-size: v.$tamanho-fonte-base * 0.9;
+}

@@ -1,0 +1,27 @@
+@use 'variaveis' as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: v.$cor-fundo-claro;
+  color: v.$cor-texto-escuro;
+  font-family: v.$fonte-principal;
+  font-weight: 400;
+  transition: background-color 0.4s ease, color 0.4s ease;
+
+  &.dark {
+    background-color: v.$cor-fundo-escuro;
+    color: v.$cor-texto-claro;
+  }
+}
+
+.icon {
+  width: v.$tamanho-icone;
+  height: v.$tamanho-icone;
+  fill: none;
+  stroke: v.$cor-primaria;
+}

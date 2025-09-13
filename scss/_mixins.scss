@@ -1,0 +1,23 @@
+@use 'variaveis' as v;
+
+@mixin botao-basico($cor-fundo: v.$cor-primaria, $cor-texto: v.$cor-clara) {
+  font-family: v.$fonte-principal;
+  font-weight: bold;
+  padding: v.$espacamento-base;
+  border: none;
+  background: $cor-fundo;
+  color: $cor-texto;
+  font-size: v.$tamanho-fonte-base * 1.2;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: v.$cor-primaria-hover;
+  }
+}
+
+@mixin espacamento-secao {
+  padding: v.$espacamento-grande * 2 5vw;
+  margin-bottom: v.$espacamento-grande;
+}

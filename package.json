@@ -1,0 +1,12 @@
+{
+  "name": "responsive-sass-test-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "theme.js",
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
