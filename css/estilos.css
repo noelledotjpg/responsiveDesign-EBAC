@@ -59,7 +59,7 @@ body.dark {
   left: 0;
   width: 110%;
   height: 110%;
-  background-image: url("/img/code.jpg");
+  background-image: url("img/code.jpg");
   background-size: cover;
   background-position: center;
   filter: brightness(0.3) blur(6px);
